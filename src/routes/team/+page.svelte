@@ -18,6 +18,13 @@
 				'Alex is a passionate software engineer, striving for efficiency in his work. His journey began in high school, where he learned programming, and it has led him to experiment with all kinds of coding. He finds joy in developing optimized solutions for backend services and internal tools.'
 		},
 		{
+			name: 'Andras',
+			role: 'Engineer',
+			imgSrc: '/images/team/andras.png',
+			description:
+				'Ever since his childhood Andras was always entertained by the worlds of books, movies, and video games. He also enjoy creating and building things, figuring out solutions to mind-bending problems. Game development has everything Andras love: fantasy, creativity, ingenuity. Andras mainly enjoy working on Gameplay, that is where he is most experienced.'
+		},
+		{
 			name: 'Betti',
 			role: 'Recruiter',
 			imgSrc: '/images/team/betti.png',
@@ -48,7 +55,7 @@
 	];
 
 	const advisors: Array<Member> = [
-	
+		
 	];
 </script>
 
@@ -74,20 +81,19 @@
 				</li>
 			{/each}
 		</ul>
-		{#if advisors.length > 0}
-
-		<h2
-			class="font-aldrich text-2xl uppercase text-blue md:text-4xl xl:text-7xl"
-		>
-			Advisors
-		</h2>
-		<ul class="space-y-16">
-			{#each advisors as m, i}
-				<li>
-					<MemberCard member={m} align={i % 2 ? 'right' : 'left'} />
-				</li>
-			{/each}
-		</ul>
+		{#if advisors.length >0}
+			<h2
+				class="font-aldrich text-2xl uppercase text-blue md:text-4xl xl:text-7xl"
+			>
+				Advisors
+			</h2>
+			<ul class="space-y-16">
+				{#each advisors as m, i}
+					<li>
+						<MemberCard member={m} align={i % 2 ? 'right' : 'left'} />
+					</li>
+				{/each}
+			</ul>
 		{/if}
 	</div>
 </section>
