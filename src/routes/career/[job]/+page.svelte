@@ -17,18 +17,21 @@
 				>
 					{data.job.title}
 				</h1>
-				<a
+				<!-- <a
 					href="https://forms.gle/7C2D1XYY6kD3BrvYA" target="_blank"
 					class="rounded-full border-2 border-evenDarkerNavy px-8 py-1 pb-1.5 text-xl text-evenDarkerNavy md:text-2xl xl:border-4 xl:px-16 xl:pb-5 xl:pt-3 xl:text-4xl"
 				>
 					Apply
-				</a>
+				</a> -->
 			</div>
-
+		
 			<p
 				class="no-leading max-w-3xl font-anonymous text-base md:text-xl xl:text-3xl"
 			>
-				{data.job.description}
+				{data.job.description} Apply here: <a
+				class="text-darkNavy hover:opacity-90"
+				href="mailto:info@galactic-fleet.com">info@galactic-fleet.com</a
+			>
 			</p>
 
 			<List title="Responsibilities" items={data.job.whatYouDo} />

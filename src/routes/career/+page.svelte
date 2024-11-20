@@ -49,7 +49,7 @@
 		<p class={textStyle}>
 			Don't see what you fit into? Drop us a line at <a
 				class="text-darkNavy hover:opacity-90"
-				href="mailto:info@galacticsyn.com">info@galacticsyn.com</a
+				href="mailto:info@galactic-fleet.com">info@galactic-fleet.com</a
 			> and tell us how you got to where you are.
 		</p>
 		<a
