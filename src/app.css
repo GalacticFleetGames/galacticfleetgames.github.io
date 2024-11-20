@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Some utility classes, which provide responsive spacing based on values inside `tailwindcss.config.js` */
+@layer base {
+	* {
+		@apply tracking-tight;
+	}
+
+	.no-leading {
+		@apply leading-none sm:leading-none md:leading-none lg:leading-none xl:leading-none;
+	}
+
+	.px-wrapper {
+		@apply px-4 md:px-8 xl:px-14;
+	}
+	.py-wrapper {
+		@apply py-4 md:py-8 xl:py-14;
+	}
+	.p-wrapper {
+		@apply p-4 md:p-8 xl:p-14;
+	}
+	.pl-wrapper {
+		@apply pl-4 md:pl-8 xl:pl-14;
+	}
+	.pr-wrapper {
+		@apply pr-4 md:pr-8 xl:pr-14;
+	}
+
+	.h-headerHeight {
+		@apply h-headerHeightSm md:h-headerHeightMd xl:h-headerHeightXl;
+	}
+
+	.pt-headerHeight {
+		@apply pt-headerHeightSm md:pt-headerHeightMd xl:pt-headerHeightXl;
+	}
+
+	.pb-headerHeight {
+		@apply pb-headerHeightSm md:pb-headerHeightMd xl:pb-headerHeightXl;
+	}
+
+	.py-headerHeight {
+		@apply py-headerHeightSm md:py-headerHeightMd xl:py-headerHeightXl;
+	}
+}
