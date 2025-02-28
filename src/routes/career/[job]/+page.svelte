@@ -28,10 +28,7 @@
 			<p
 				class="no-leading max-w-3xl font-anonymous text-base md:text-xl xl:text-3xl"
 			>
-				{data.job.description} Apply here: <a
-				class="text-darkNavy hover:opacity-90"
-				href="mailto:info@galactic-fleet.com">info@galactic-fleet.com</a
-			>
+				{data.job.description} 
 			</p>
 
 			<List title="Responsibilities" items={data.job.whatYouDo} />

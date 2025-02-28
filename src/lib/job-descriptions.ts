@@ -23,7 +23,11 @@ export const jobs: Array<JobDescription> = [
 			'Quality focused mindset',
 			'Being able to troubleshoot problems in unfamiliar systems',
 			'Kubernetes expertise is a plus',
-		]
+		],
+		howToApply: {
+			text: "Please apply with an English CV and a portfolio of your latest work! You can send your application to ",
+			contact: "laura.kocsis@galactic-fleet.com"
+		}
 	},
 	{
 		title: '2D illustrator intern ',

@@ -20,7 +20,7 @@
 			We&apos;re Hiring
 		</h1>
 		<p class={textStyle}>
-			We’re Galactic Fleet, a Hungarian video game development company with roots in Budapest and partnerships in California. We build video games, and we love it! Games are universally understood, and modern video games engage all ages. Imagine building something that can be in the hands of everyone, from children to grandmothers! 
+			We’re Galactic Fleet, a Hungarian Video Game Studio with roots in Budapest and partnerships in California. We build video games, and we love it! Games are universally understood, and modern video games engage all ages. Imagine building something that can be in the hands of everyone, from children to grandmothers! 
 		</p>
 		<p class={textStyle}>
 			Our company is focused on building the best mobile, PC and console experiences for our partners, players, and employees without compromise.
