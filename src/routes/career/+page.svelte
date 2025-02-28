@@ -20,31 +20,17 @@
 			We&apos;re Hiring
 		</h1>
 		<p class={textStyle}>
-			We’re Galactic Fleet and our business is fun. We build video games, and we
-			love it. Games are universally understood, and modern video games engage
-			all ages. Imagine building something that can be in the hands of everyone,
-			from children to grandmothers! We are a remote-first global video game
-			development company with roots in Budapest and California. We’re looking
-			for software developers that share our passion.
+			We’re Galactic Fleet, a Hungarian Video Game Studio with roots in Budapest and partnerships in California. We build video games, and we love it! Games are universally understood, and modern video games engage all ages. Imagine building something that can be in the hands of everyone, from children to grandmothers! 
 		</p>
 		<p class={textStyle}>
-			Our founders are four gamers, friends, and industry veterans who decided
-			to team up and build an independent game company focused on building the
-			best mobile and PC experiences for our partners, players, and employees
-			without compromise. We use our decades of industry experience on iconic
-			franchises such as The Sims, Pogo, FIFA, Madden, and Call of Duty to
-			inform our vision and develop customized solutions that impact the bottom
-			line.
+			Our company is focused on building the best mobile, PC and console experiences for our partners, players, and employees without compromise.
+Seasoned veterans, fresh graduates and motivated interns are building up our team.
 		</p>
 		<p class={textStyle}>
-			In an industry based on fun, your job should be fun! For us, fun is:
-			solving hard problems, coloring outside the lines, building the
-			impossible, and working collaboratively. Fun is seeing someone play your
-			game on a bus or plane. It’s seeing a co-worker’s idea succeed, then they
-			turn around and help you realize your idea. We value every idea,
-			contribution, perspective; and will work tirelessly to put those ideas
-			into something tangible in the hands of our players. If this sounds
-			interesting to you, reach out to us!
+			In an industry based on fun, your job should be fun! For us, fun is: solving hard problems, coloring outside the lines, building the impossible, and working collaboratively. Fun is seeing someone play your game on a bus or plane. It’s seeing a co-worker’s idea succeed, then they turn around and help you realize your idea. We value every idea, contribution, perspective; and will work tirelessly to put those ideas into something tangible in the hands of our players.
+		</p>
+		<p class={textStyle}>
+			We’re looking for colleagues that share our passion.
 		</p>
 		<p class={textStyle}>
 			Don't see what you fit into? Drop us a line at <a

@@ -18,13 +18,6 @@
 				'Alex is a passionate software engineer, striving for efficiency in his work. His journey began in high school, where he learned programming, and it has led him to experiment with all kinds of coding. He finds joy in developing optimized solutions for backend services and internal tools.'
 		},
 		{
-			name: 'Betti',
-			role: 'Recruiter',
-			imgSrc: '/images/team/betti.png',
-			description:
-				'Betti has a remarkable ability to identify exceptional talents. She has worked with global companies including Cloudera and GitLab to assemble winning teams that thrive on creative problem solving. Her emphasis on fostering a culture of innovation and driving efficiency has made a significant impact on the success of the organizations she has worked with.'
-		},
-		{
 			name: 'Bence',
 			role: 'Software Engineer',
 			imgSrc: '/images/team/bence.png',

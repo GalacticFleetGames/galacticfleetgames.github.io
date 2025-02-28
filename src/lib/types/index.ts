@@ -4,4 +4,9 @@ export interface JobDescription {
 	slug: string;
 	whatWeLookFor: string[];
 	whatYouDo: string[];
+	whatWeOffer?: string[];
+	howToApply?: {
+		text: string;
+		contact: string;
+	}
 }
