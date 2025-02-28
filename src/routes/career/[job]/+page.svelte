@@ -36,6 +36,24 @@
 
 			<List title="Responsibilities" items={data.job.whatYouDo} />
 			<List title="What are we looking for" items={data.job.whatWeLookFor} />
+			
+			{#if data.job.whatWeOffer}
+				<List title="What we offer" items={data.job.whatWeOffer} />
+			{/if}
+
+			{#if data.job.howToApply}
+			<h3
+			class="font-aldrich text-2xl text-evenDarkerNavy md:text-4xl xl:text-6xl"
+		>
+				How to apply
+			</h3>
+			<p class="no-leading max-w-3xl font-anonymous text-base md:text-xl xl:text-3xl">
+				{data.job.howToApply.text} Apply here: <a
+				class="text-darkNavy hover:opacity-90"
+				href={`mailto:${data.job.howToApply.contact}`}>{data.job.howToApply.contact}</a>
+			</p>
+			{/if}
+
 		</div>
 	{/if}
 </section>

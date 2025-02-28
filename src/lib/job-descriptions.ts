@@ -2,27 +2,6 @@ import type { JobDescription } from './types';
 
 export const jobs: Array<JobDescription> = [
 	{
-		title: 'Data Layer Engineer',
-		description:
-			'You will be working together with both the platform team and the gameplay engineering team as well as game designers to understand the game experience and architect the underlying databases and APIs.',
-		slug: 'data-layer',
-		whatYouDo: [
-			'Build APIs in the Data Layer to support new gameplay capabilities',
-			'Understand the end to end system behavior',
-			'Work with backend side databases',
-			'Design and implement scalable and highly performant algorithms that are easy to use by gameplay engineers',
-			'Work with the infrastructure engineers to execute performance profiling and understand key bottlenecks and limitations',
-			'End-to-end ownership of web services'
-		],
-		whatWeLookFor: [
-			'Strong computer science fundamentals, including knowledge of data structures, performance and scalability',
-			'3+ years of experience building APIs or web services',
-			'5+ years of experience working with SQL and NoSQL databases',
-			'Experience with Go / Rust / C# or NodeJS',
-			'Are able to learn quickly and get up to speed'
-		]
-	},
-	{
 		title: 'Cloud Infrastructure Engineer',
 		description:
 			'To create an engaging gaming experience we need to lay down the fundamentals of the support platform. A multi-world MMO requires well-designed, flexible infrastructure connected to a quick delivery pipeline.',
@@ -47,21 +26,35 @@ export const jobs: Array<JobDescription> = [
 		]
 	},
 	{
-		title: 'Software Engineer Intern',
+		title: '2D illustrator intern ',
 		description:
-			'You have the chance to get in the world of game development, you will understand how your favorite games are created.',
-		slug: 'swe-intern',
+			"In this role, you will be responsible for creating visuals for games based on game concepts. You will collaborate with the team to understand project requirements and create visuals that incorporate the illustrations and design elements with the game's core principles.",
+		slug: '2d-intern',
 		whatYouDo: [
-			'Work with senior game developers',
-			'Understand the end to end system behavior',
-			'Maintain existing code and implement new features'
+			'Collaborate with the team on making graphics and illustrations based on game concepts',
+			'Create game assets, illustrations, character design and concept art',
+			'Revise designs based on feedback from the team',
+			'Collaborate  with team members to understand project objectives and deadlines',
+			'Adhere to naming convention when creating game ready assets that can be used at all steps in the pipeline'
 		],
 		whatWeLookFor: [
-			'Basic computer science fundamentals, including knowledge of data structures',
-			'High standards of work ethic',
-			'Highly motivated and able to learn quickly',
-			'Passion for computer games is plus',
-			'Developed your own computer game is huge bonus'
-		]
-	}
+			'Pursuing a degree in Graphic Design, Visual Arts, or a related field',
+			'Proficiency in design software such as Adobe Illustrator or equivalent tools',
+			'Strong understanding of design principles, typography, color theory, and layout',
+			'Ability to work independently and cooperatively',
+			'Manage time effectively to meet deadlines',
+			'Advanced English language skills: ability to effectively present and explain your work in English',
+		],
+		whatWeOffer: [
+			'Paid internship',
+			'Office in the city center of Budapest',
+			'Hybrid work',
+			'Flexible working hours',
+			'International environment'
+		],
+		howToApply: {
+			text: "Please apply with an English CV and a portfolio of your latest work! You can send your application to ",
+			contact: "laura.kocsis@galactic-fleet.com"
+		}
+	},
 ];
