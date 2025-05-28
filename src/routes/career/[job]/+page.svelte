@@ -45,7 +45,7 @@
 				How to apply
 			</h3>
 			<p class="no-leading max-w-3xl font-anonymous text-base md:text-xl xl:text-3xl">
-				{data.job.howToApply.text} Apply here: <a
+				{data.job.howToApply.text} <a
 				class="text-darkNavy hover:opacity-90"
 				href={`mailto:${data.job.howToApply.contact}`}>{data.job.howToApply.contact}</a>
 			</p>

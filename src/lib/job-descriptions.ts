@@ -24,8 +24,15 @@ export const jobs: Array<JobDescription> = [
 			'Being able to troubleshoot problems in unfamiliar systems',
 			'Kubernetes expertise is a plus',
 		],
+		whatWeOffer: [
+			"Deep insights into the world of video games - work with professional US studios",
+			"Opportunity to work independently and creatively - always appreciate your ideas and proactivity",
+			"Flexible, hybrid working arrangements - we aim for the right work-life balance",
+			"Cool office environment in the city centre of Budapest - relaxation facilities, office massage, free networking events",
+			"Transparent, open and friendly company culture - everyone from various backgrounds, experiences, and perspectives are valued and respected"
+		],
 		howToApply: {
-			text: "Please apply with an English CV and a portfolio of your latest work! You can send your application to ",
+			text: "Please apply with an English CV in email: ",
 			contact: "laura.kocsis@galactic-fleet.com"
 		}
 	},
@@ -57,7 +64,7 @@ export const jobs: Array<JobDescription> = [
 			'International environment'
 		],
 		howToApply: {
-			text: "Please apply with an English CV and a portfolio of your latest work! You can send your application to ",
+			text: "Please apply with an English CV and a portfolio of your latest work! You can send your application to: ",
 			contact: "laura.kocsis@galactic-fleet.com"
 		}
 	},
