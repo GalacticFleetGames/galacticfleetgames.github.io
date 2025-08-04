@@ -77,36 +77,4 @@ export const jobs: Array<JobDescription> = [
 			contact: "laura.kocsis@galactic-fleet.com"
 		}
 	},
-	{
-		title: 'MARKETING INTERN',
-		description:
-			"In  this  role,  you  will  be  responsible  for creating strategies for reaching our target audience and building our community. Your role will also include managing our social media platforms and  creating  content  that  represents  our  studio's culture and helps people connect with us and our games.",
-		slug: 'marketing-intern',
-		whatYouDo: [
-			'Developing and implementing strategies to reach target audiences',
-			'Strategies for building and nurturing a vibrant community',
-			'Conducting competitor analysis and benchmarking',
-			'Identifying and planning publication channels and methods',
-			'Create content on relevant social media platforms',
-			'Communicating and reinforcing brand vision',
-		],
-		whatWeLookFor: [
-			'Highly organized, with the ability to prioritize and work independently in a proactive manner',
-			'Familiarity with the gaming industry',
-			'Up to date on social media trends',
-			'Essential video and photo editor skills for content creation',
-			'Strong written and verbal communication skills both in Hungarian and in English',
-		],
-		whatWeOffer: [
-			'Paid internship',
-			'Flexible working hours, 20 hours per week',
-			'Office in the city center of Budapest',
-			'Hybrid work',
-			'International environment',
-		],
-		howToApply: {
-			text: "Please apply with an English CV.	 You can send your application to: ",
-			contact: "laura.kocsis@galactic-fleet.com"
-		}
-	},
 ];
