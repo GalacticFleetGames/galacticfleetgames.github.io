@@ -44,3 +44,7 @@
 		@apply py-headerHeightSm md:py-headerHeightMd xl:py-headerHeightXl;
 	}
 }
+
+body{
+	min-height: 100vh;
+}
