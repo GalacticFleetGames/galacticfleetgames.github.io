@@ -21,9 +21,9 @@
 <div class="text-white min-h-screen">
 	<Header />
 	{#key data.url}
-		<main in:fly={{ duration: 400 }} out:fly={{ duration: 100 }} class="h-full flex flex-1">
+		<main in:fly={{ duration: 400 }} out:fly={{ duration: 100 }} class="h-screen flex flex-col flex-1">
 			<slot />
+			<Footer />
 		</main>
 	{/key}
-	<Footer />
 </div>
