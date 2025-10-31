@@ -9,12 +9,12 @@
   style="background-image: url('/svgs/layout/contact-bg.svg')"
 > -->
 <section
-	class="px-wrapper max-w-screen relative flex min-h-screen justify-start pt-none overflow-hidden bg-black bg-[url('/svgs/layout/home-bg-mobile.svg')] md:bg-[url('/svgs/layout/home-bg.svg')] bg-center bg-contain md:bg-cover"
+	class="px-wrapper max-w-screen relative flex min-h-screen justify-start pt-none overflow-hidden bg-black bg-[url('/svgs/layout/home-bg-mobile.svg')] md:bg-[url('/svgs/layout/home-bg-logo.svg')] bg-center bg-contain md:bg-cover"
 	>
 	<h1 class="sr-only">Contact informations for Galactic Fleet</h1>
 
 	<div
-		class="flex h-full w-fit flex-col items-start justify-start gap-y-4 md:gap-y-6 xl:gap-y-8 pt-headerHeightXl"
+		class="flex w-fit flex-col gap-y-4 md:gap-y-6 xl:gap-y-8 pt-headerHeightXl"
 	>
 		<ul class="flex flex-col items-start justify-start gap-y-2 md:ml-4">
 			<a
@@ -34,6 +34,7 @@
 				>
 			</a>
 		</ul>
+
 	</div>
 
 </section>

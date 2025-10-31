@@ -18,10 +18,10 @@
 	<link rel="manifest" href="/site.webmanifest" />
 </svelte:head>
 
-<div class="text-white min-h-screen flex flex-col">
+<div class="text-white min-h-screen flex flex-col justify-between bg-black">
 	<Header />
 	{#key data.url}
-		<main in:fly={{ duration: 400 }} out:fly={{ duration: 100 }} class="h-screen flex flex-col flex-1">
+		<main in:fly={{ duration: 400 }} out:fly={{ duration: 100 }} class="h-full flex flex-col bg-no-repeat bg-cover">
 			<slot />
 		</main>
 	{/key}

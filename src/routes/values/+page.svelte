@@ -57,10 +57,10 @@ const companyValues: CompanyValue[] = [
 </svelte:head>
 
 <section
-	class="flex h-[60vh] w-full flex-col items-center justify-end bg-cover bg-center md:h-screen"
+	class="flex h-[60vh]  w-full flex-col items-center justify-end bg-cover bg-center md:h-screen"
 	style="background-image: url('{base}/svgs/layout/portfolio-bg.svg');"
 >
-<p class="text-center text-sm w-4/5 md:text-base md:w-1/2 text-[#0365aa] font-semibold md:py-12">
+<p class="text-center text-sm w-4/5 md:text-lg md:text-base md:w-1/2 lg:w-1/3 xl:w-1/4 text-[#0365aa] font-semibold md:py-12 lg:py-2">
     At the core of our culture are values that guide how we work, collaborate, and grow — with integrity, respect, and a commitment to excellence. These principles define who we are and how we show up every day.
 </p>
 </section>

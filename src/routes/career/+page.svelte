@@ -5,7 +5,7 @@
 	export let data;
 
 	const textStyle =
-		'w-full font-anonymous  text-center no-leading max-w-xs sm:max-w-sm sm:text-md md:text-md  md:text-left md:max-w-screen-sm xl:max-w-screen-md w-1/2';
+		'w-full font-anonymous  text-center no-leading max-w-xs sm:max-w-sm sm:text-md md:text-md md:text-xl md:text-left md:max-w-screen-sm xl:max-w-screen-md w-1/2';
 </script>
 
 <svelte:head>
@@ -14,7 +14,7 @@
 
 <section class="bg-babyBlue">
 	<div
-		class="px-wrapper flex h-screen w-full flex-col items-center justify-start gap-y-8 bg-[url('/svgs/layout/career-bg-mobile.svg')] bg-cover bg-no-repeat pt-headerHeightXl text-[#0365aa] font-semibold md:items-start md:bg-[url('/svgs/layout/career-bg.svg')] md:bg-auto md:bg-right-top md:pt-headerHeightDouble "
+		class="px-wrapper flex h-screen w-full flex-col items-center justify-start gap-y-8 bg-[url('/svgs/layout/career-bg-mobile.svg')] bg-cover bg-right bg-no-repeat pt-headerHeightXl text-[#0365aa] font-semibold md:items-start md:bg-[url('/svgs/layout/career-bg.svg')] md:bg-auto md:bg-right-top md:pt-headerHeightDouble "
 	>
 		<h1 class="font-aldrich text-3xl text-darkNavy md:text-5xl xl:text-6xl w-1/2">
 			We&apos;re Hiring
