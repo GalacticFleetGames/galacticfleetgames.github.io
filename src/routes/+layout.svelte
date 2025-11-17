@@ -1,10 +1,10 @@
 <script lang="ts">
-	import '../app.css';
 	import '@fontsource/aldrich';
 	import '@fontsource/anonymous-pro';
+	import '../app.css';
 
-	import Header from '$lib/components/header.svelte';
 	import Footer from '$lib/components/footer.svelte';
+	import Header from '$lib/components/header.svelte';
 	import { fly } from 'svelte/transition';
 
 	//data that comes from +layout.server.ts
@@ -18,10 +18,10 @@
 	<link rel="manifest" href="/site.webmanifest" />
 </svelte:head>
 
-<div class="text-white">
+<div class="text-white min-h-screen flex flex-col justify-between bg-black">
 	<Header />
 	{#key data.url}
-		<main in:fly={{ duration: 400 }} out:fly={{ duration: 100 }}>
+		<main in:fly={{ duration: 400 }} out:fly={{ duration: 100 }} class="h-full flex flex-col bg-no-repeat bg-cover">
 			<slot />
 		</main>
 	{/key}

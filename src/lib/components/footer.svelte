@@ -19,7 +19,7 @@
 </script>
 
 <footer
-	class="relative flex h-20 md:h-36 xl:h-44 w-full justify-between items-center gap-8 xl:gap-40 overflow-x-hidden bg-navy "
+	class="flex h-20 md:h-36 xl:h-44 w-full justify-between items-center gap-8 xl:gap-40 overflow-x-hidden bg-navy pb-0"
 >
     <img class="pl-wrapper w-40 sm:w-48 md:w-60 lg:w-72 xl:w-[32rem] " src="/svgs/logo.svg" alt="Logo of the company">
   <!-- <div class="left-6 absolute w-fit h-full inline-flex items-center justify-center">

@@ -5,7 +5,7 @@
 	export let data;
 
 	const textStyle =
-		'w-full font-anonymous  text-center no-leading max-w-xs sm:max-w-sm sm:text-md md:text-md  md:text-left md:max-w-screen-sm xl:max-w-screen-md';
+		'w-full font-anonymous  text-center no-leading max-w-xs sm:max-w-sm sm:text-md md:text-md md:text-xl md:text-left md:max-w-screen-sm xl:max-w-screen-md w-1/2';
 </script>
 
 <svelte:head>
@@ -14,29 +14,18 @@
 
 <section class="bg-babyBlue">
 	<div
-		class="px-wrapper flex h-screen w-full flex-col items-center justify-start gap-y-8 bg-[url('/svgs/layout/career-bg-mobile.svg')] bg-cover bg-no-repeat pt-headerHeightXl text-black md:items-start md:bg-[url('/svgs/layout/career-bg.svg')] md:bg-auto md:bg-right-top md:pt-headerHeightDouble"
+		class="px-wrapper flex h-screen w-full flex-col items-center justify-start gap-y-8 bg-[url('/svgs/layout/career-bg-mobile.svg')] bg-cover bg-right bg-no-repeat pt-headerHeightXl text-[#0365aa] font-semibold md:items-start md:bg-[url('/svgs/layout/career-bg.svg')] md:bg-auto md:bg-right-top md:pt-headerHeightDouble "
 	>
-		<h1 class="font-aldrich text-3xl text-darkNavy md:text-5xl xl:text-6xl">
+		<h1 class="font-aldrich text-3xl text-darkNavy md:text-5xl xl:text-6xl w-1/2">
 			We&apos;re Hiring
 		</h1>
 		<p class={textStyle}>
-			We’re Galactic Fleet, a Hungarian Video Game Studio with roots in Budapest and partnerships in California. We build video games, and we love it! Games are universally understood, and modern video games engage all ages. Imagine building something that can be in the hands of everyone, from children to grandmothers! 
+			In an industry based on fun, your job should be fun! For us, fun is: solving hard problems, coloring outside the lines, building the impossible, and working collaboratively. Fun is seeing someone play your game on a bus or plane. It’s seeing a co-worker’s idea succeed, then they turn around and help you realize your idea. We value every idea, contribution, perspective; and will work tirelessly to put those ideas into something tangible in the hands of our players.</p>
+		<p class={textStyle}>
+			We’re looking for colleagues that share our passion and values.
 		</p>
 		<p class={textStyle}>
-			Our company is focused on building the best mobile, PC and console experiences for our partners, players, and employees without compromise.
-Seasoned veterans, fresh graduates and motivated interns are building up our team.
-		</p>
-		<p class={textStyle}>
-			In an industry based on fun, your job should be fun! For us, fun is: solving hard problems, coloring outside the lines, building the impossible, and working collaboratively. Fun is seeing someone play your game on a bus or plane. It’s seeing a co-worker’s idea succeed, then they turn around and help you realize your idea. We value every idea, contribution, perspective; and will work tirelessly to put those ideas into something tangible in the hands of our players.
-		</p>
-		<p class={textStyle}>
-			We’re looking for colleagues that share our passion.
-		</p>
-		<p class={textStyle}>
-			Don't see what you fit into? Drop us a line at <a
-				class="text-darkNavy hover:opacity-90"
-				href="mailto:info@galactic-fleet.com">info@galactic-fleet.com</a
-			> and tell us how you got to where you are.
+			Don’t find an open position that suits you right now? Reach out to us at <a href="mailto:info@galactic-fleet.com" class="underline">info@galactic-fleet.com</a>  and tell us about yourself, maybe we can find the common ground!
 		</p>
 		<a
 			href="#roles"
@@ -69,9 +58,13 @@ Seasoned veterans, fresh graduates and motivated interns are building up our tea
 		<ul
 			class="flex w-full flex-col items-center justify-start gap-y-12 md:gap-y-16 xl:gap-y-20"
 		>
+		{#if data.jobs.length === 0}
+		<p class="text-[#0365aa] text-2xl font-semibold">We currently don’t have any open positions.</p>
+		{:else}
 			{#each data.jobs as jd}
 				<RoleCard {jd} />
 			{/each}
+		{/if}
 		</ul>
 	</div>
 </section>

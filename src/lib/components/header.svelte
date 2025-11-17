@@ -3,16 +3,20 @@
 
 	const paths: Array<{ title: string; href: string }> = [
 		{
-			title: 'About us',
+			title: 'About Us',
 			href: '/'
 		},
 		{
 			title: 'Our Team',
 			href: '/team'
 		},
+		// {
+		// 	title: 'Portfolio',
+		// 	href: '/portfolio'
+		// },
 		{
-			title: 'Portfolio',
-			href: '/portfolio'
+			title: 'Our Values',
+			href: '/values'
 		},
 		{
 			title: 'Career',
