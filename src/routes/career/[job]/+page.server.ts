@@ -11,3 +11,5 @@ export const load: PageServerLoad = ({ params }) => {
 		job
 	};
 };
+
+export const prerender = false;
