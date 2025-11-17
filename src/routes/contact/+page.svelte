@@ -26,12 +26,11 @@
 				>
 			</a>
 			<a
-				href="mailto:info@galactic-fleet.com"
+				href="https://www.linkedin.com/company/galacticfleet"
 				class="inline-flex gap-4 xl:gap-8"
 			>
 				<img src="/svgs/icons/linkedin.svg" alt="mail" />
-				<a href="https://www.linkedin.com/company/galacticfleet?" target="_blank" class="text-lg md:text-2xl xl:text-3xl">Galactic Fleet LinkedIn</a
-				>
+				<span class="text-lg md:text-2xl xl:text-3xl">Galactic Fleet LinkedIn</span>
 			</a>
 		</ul>
 
