@@ -21,7 +21,7 @@
 <div class="text-white min-h-screen flex flex-col justify-between bg-black">
 	<Header />
 	{#key data.url}
-		<main in:fly={{ duration: 400 }} out:fly={{ duration: 100 }} class="h-full flex flex-col bg-no-repeat bg-cover">
+		<main in:fly={{ duration: 400 }} out:fly={{ duration: 100 }} class="flex-1 flex flex-col bg-no-repeat bg-cover">
 			<slot />
 		</main>
 	{/key}
