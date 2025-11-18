@@ -17,21 +17,24 @@
 		class="flex w-fit flex-col gap-y-4 md:gap-y-6 xl:gap-y-8 pt-headerHeightXl"
 	>
 		<ul class="flex flex-col items-start justify-start gap-y-2 md:ml-4">
-			<a
-				href="mailto:info@galactic-fleet.com"
-				class="inline-flex gap-4 xl:gap-8"
-			>
-				<img src="/svgs/icons/mail.svg" alt="mail" />
-				<span class="text-lg md:text-2xl xl:text-3xl">info@galactic-fleet.com</span
+			<li>
+				<a
+					href="mailto:info@galactic-fleet.com"
+					class="flex items-center gap-4 xl:gap-8"
 				>
-			</a>
-			<a
-				href="https://www.linkedin.com/company/galacticfleet"
-				class="inline-flex gap-4 xl:gap-8"
-			>
-				<img src="/svgs/icons/linkedin.svg" alt="mail" />
-				<span class="text-lg md:text-2xl xl:text-3xl">Galactic Fleet LinkedIn</span>
-			</a>
+					<img src="/svgs/icons/mail.svg" alt="mail" />
+					<span class="text-lg md:text-2xl xl:text-3xl">info@galactic-fleet.com</span>
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://www.linkedin.com/company/galacticfleet"
+					class="flex items-center gap-4 xl:gap-8"
+				>
+					<img src="/svgs/icons/linkedin.svg" alt="mail" />
+					<span class="text-lg md:text-2xl xl:text-3xl">Galactic Fleet LinkedIn</span>
+				</a>
+			</li>
 		</ul>
 
 	</div>
