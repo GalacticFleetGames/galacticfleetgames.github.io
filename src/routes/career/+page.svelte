@@ -25,7 +25,18 @@
 			We’re looking for colleagues that share our passion and values.
 		</p>
 		<p class={textStyle}>
-			Don’t find an open position that suits you right now? Reach out to us at <a href="mailto:info@galactic-fleet.com" class="underline">info@galactic-fleet.com</a>  and tell us about yourself, maybe we can find the common ground!
+			Don’t find an open position that suits you right now? Reach out to us at
+			<a href="mailto:info@galactic-fleet.com" class="underline">info@galactic-fleet.com</a>
+			or
+			<a
+				href="https://www.linkedin.com/company/galactic-fleet/about/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="underline"
+			>
+				contact us on LinkedIn
+			</a>
+			and tell us about yourself, maybe we can find the common ground!
 		</p>
 		<a
 			href="#roles"
