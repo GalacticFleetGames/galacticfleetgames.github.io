@@ -17,14 +17,6 @@
 		</div>
 		<div class="flex flex-wrap items-center gap-3 md:gap-4 xl:gap-6">
 			<a
-				href={jd.pdfUrl}
-				target="_blank"
-				rel="noopener noreferrer"
-				class="rounded-full border-2 border-white px-5 py-1.5 font-aldrich text-sm transition-all duration-200 hover:-translate-y-2 hover:opacity-80 md:border-4 md:px-6 md:py-2 md:text-xl xl:px-10 xl:py-6 xl:text-4xl"
-			>
-				Role&nbsp;PDF
-			</a>
-			<a
 				href={jd.linkedinUrl}
 				target="_blank"
 				rel="noopener noreferrer"

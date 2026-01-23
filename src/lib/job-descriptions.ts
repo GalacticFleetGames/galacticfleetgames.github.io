@@ -6,7 +6,6 @@ export const jobs: Array<JobDescription> = [
 		description:
 			"This isn't just about maintaining services; it's about replacing a legacy C++ solution with a modern, cutting-edge system that can handle the emergence, persistence, and launch-day load of a living simulation game world (think inter-planetary travel, real-time creature AI, complex economy).",
 		slug: 'backend-engineer-mmo-platform',
-		pdfUrl: '/pdfs/backend-engineer-mmo-platform.pdf',
 		linkedinUrl: 'https://www.linkedin.com/company/galactic-fleet/about/',
 		whatYouDo: [
 			'Design and evolve the integration layer between Unity game servers and the Node.js backend',
@@ -22,9 +21,8 @@ export const jobs: Array<JobDescription> = [
 	{
 		title: 'SRE - MMO Platform',
 		description:
-			"Exciting opportunity for experienced SREs! Playable Worlds, a studio founded by MMO industry veterans, is building a next-gen, multi-world MMORPG. They're looking for an SRE to design and operate the AWS backend infrastructure as they head toward launch.",
+			"Exciting opportunity for experienced SREs! A studio founded by MMO industry veterans is building a next-gen, multi-world MMORPG. They're looking for an SRE to design and operate the AWS backend infrastructure as they head toward launch.",
 		slug: 'sre-mmo-platform',
-		pdfUrl: '/pdfs/sre-mmo-platform.pdf',
 		linkedinUrl: 'https://www.linkedin.com/company/galactic-fleet/about/',
 		whatYouDo: [
 			'Design, operate, and scale AWS infrastructure for live game worlds',
@@ -42,7 +40,6 @@ export const jobs: Array<JobDescription> = [
 		description:
 			"This role is a unique chance to push Unity's rendering capabilities, focusing on a deeply dynamic world where player actions have permanent visual impacts (think terrain modification, dynamic materials, etc.). You'll own key parts of the rendering stack, balancing high visual fidelity with top-tier PC performance.",
 		slug: 'graphics-engineer-unity',
-		pdfUrl: '/pdfs/graphics-engineer-unity.pdf',
 		linkedinUrl: 'https://www.linkedin.com/company/galactic-fleet/about/',
 		whatYouDo: [
 			'Design and implement rendering features in Unity on Windows - render on an ever-changing terrain!',
