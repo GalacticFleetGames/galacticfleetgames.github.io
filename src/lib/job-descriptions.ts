@@ -1,80 +1,58 @@
 import type { JobDescription } from './types';
 
 export const jobs: Array<JobDescription> = [
-	// {
-	// 	title: 'SENIOR SOFTWARE ENGINEER',
-	// 	description:
-	// 		'You will deal with the interaction model, persisting user data, create and orchestrate experiments with extensive logging, build visual and vocal interactions, deal with issues reported by actual players.',
-	// 	slug: 'senior-software-engineer',
-	// 	whatYouDo: [
-	// 		'Design engineering solutions for new game features or experiments',
-	// 		'Maintain the team’s delivery and its pace',
-	// 		'Identify roadblocks and help the team to get over them',
-	// 		'Understand and improve the end to end system behavior, development experience, code health',
-	// 		'Work with product managers, designers and QA people. Help them to improve and deliver new features',
-	// 		'End-to-end ownership of games from the concept through the backend and UI flows to the tested and released version',
-	// 		'Tracking issues, reporting to stakeholders',
-	// 		'Create maintainable code, no matter if it is new or a refactored old one'
-	// 	],
-	// 	whatWeLookFor: [
-	// 		'Strong computer science fundamentals, including knowledge of data structures and types, asynchronous algorithms, clean code, OOP and functional programming',
-	// 		'OK to write throw-away code and experiment with UX',
-	// 		'Strong data centric mindset, ready to create and analyze charts of user interactions.',
-	// 		'6+ years of experience building APIs, web services and frontend applications',
-	// 		'6+ years of experience with TypeScript and Node.js (Leveraging on TypeScript’s type system, Managing monorepos, Working with npm, Debugging is in your fingertips)',
-	// 		'1+ years of experience working with SQL and/or NoSQL databases (DynamoDB, MongoDB, etc…)',
-	// 		'Knowledge of using cloud provider services',
-	// 		'You are able to work with legacy code applying the boy scout rule.',
-	// 		'You are able to learn quickly and get up to speed',
-	// 		'You speak English with confidence - we are working with US studios'
-
-	// 	],
-	// 	whatWeOffer: [
-	// 	'Deep insights into the world of video games - work with professional US studios',
-	// 	'Opportunity to work independently and creatively - always appreciate your ideas and proactivity',
-	// 	'Flexible, hybrid working arrangements - we aim for the right work-life balance',
-	// 	'Cool office environment in the city centre of Budapest - relaxation facilities, office massage, free networking events',
-	// 	'Transparent, open and friendly company culture - everyone from various backgrounds, experiences, and perspectives are valued and respected',
-	// 	],
-	// 	howToApply: {
-	// 		text: "Please apply with an English CV in email: ",
-	// 		contact: "laura.kocsis@galactic-fleet.com"
-	// 	}
-	// },
-	// {
-	// 	title: 'SOFTWARE ENGINEER',
-	// 	description:
-	// 		'You will deal with the interaction model, persisting user data, create and orchestrate experiments with extensive logging, build visual and vocal interactions, deal with issues reported by actual players.',
-	// 	slug: 'software-engineer',
-	// 	whatYouDo: [
-	// 		'Implement engineering solutions for new game features or experiments',
-	// 		'Deliver your work in time',
-	// 		'Identify roadblocks and raise awareness',
-	// 		'Work with product managers, designers and QA people to understand the UX we are aiming for',
-	// 		'End-to-end ownership of games from the backend and UI flows to the tested and released version',
-	// 		'Make your work trackable and visible by reporting to stakeholders',
-	// 		'Create maintainable code, no matter if it is new or a refactored old one',
-	// 	],
-	// 	whatWeLookFor: [
-	// 		'Strong computer science fundamentals, including knowledge of data structures and types, asynchronous algorithms, clean code, OOP and functional programming',
-	// 		'OK to write throw-away code and experiment with UX',
-	// 		'1+ years of experience building APIs, web services and frontend applications',
-	// 		'3+ years of experience with TypeScript and Node.js',
-	// 		'Experience working with SQL and/or NoSQL databases (DynamoDB, MongoDB, etc…)',
-	// 		'You are able to learn quickly and get up to speed',
-	// 		'You speak English with confidence - we are working with US studios'
-
-	// 	],
-	// 	whatWeOffer: [
-	// 	'Deep insights into the world of video games - work with professional US studios',
-	// 	'Opportunity to work independently and creatively - always appreciate your ideas and proactivity',
-	// 	'Flexible, hybrid working arrangements - we aim for the right work-life balance',
-	// 	'Cool office environment in the city centre of Budapest - relaxation facilities, office massage, free networking events',
-	// 	'Transparent, open and friendly company culture - everyone from various backgrounds, experiences, and perspectives are valued and respected',
-	// 	],
-	// 	howToApply: {
-	// 		text: "Please apply with an English CV in email: ",
-	// 		contact: "laura.kocsis@galactic-fleet.com"
-	// 	}
-	// },
+	{
+		title: 'Backend engineer - MMO Platform',
+		description:
+			"This isn't just about maintaining services; it's about replacing a legacy C++ solution with a modern, cutting-edge system that can handle the emergence, persistence, and launch-day load of a living simulation game world (think inter-planetary travel, real-time creature AI, complex economy).",
+		slug: 'backend-engineer-mmo-platform',
+		pdfUrl: '/pdfs/backend-engineer-mmo-platform.pdf',
+		linkedinUrl: 'https://www.linkedin.com/company/galactic-fleet/about/',
+		whatYouDo: [
+			'Design and evolve the integration layer between Unity game servers and the Node.js backend',
+			'Build and maintain backend services that drive core MMO systems (world logic, progression, economy)',
+			'Collaborate closely with game engineers to support their workflows and platform needs'
+		],
+		whatWeLookFor: [
+			'Have strong experience with C++, understand its inner workings',
+			'Are comfortable designing service-to-service and engine-to-backend integrations',
+			'Are excited about building a living simulation game world'
+		]
+	},
+	{
+		title: 'SRE - MMO Platform',
+		description:
+			"Exciting opportunity for experienced SREs! Playable Worlds, a studio founded by MMO industry veterans, is building a next-gen, multi-world MMORPG. They're looking for an SRE to design and operate the AWS backend infrastructure as they head toward launch.",
+		slug: 'sre-mmo-platform',
+		pdfUrl: '/pdfs/sre-mmo-platform.pdf',
+		linkedinUrl: 'https://www.linkedin.com/company/galactic-fleet/about/',
+		whatYouDo: [
+			'Design, operate, and scale AWS infrastructure for live game worlds',
+			'Implement observability, incident response, and reliability practices',
+			'Drive infrastructure automation and CI/CD for backend services'
+		],
+		whatWeLookFor: [
+			'Hands-on SRE or DevOps experience with AWS',
+			'Infrastructure-as-code and automation skills',
+			'Enjoy debugging and problem-solving in unfamiliar or complex systems'
+		]
+	},
+	{
+		title: 'Graphics engineer (Unity)',
+		description:
+			"This role is a unique chance to push Unity's rendering capabilities, focusing on a deeply dynamic world where player actions have permanent visual impacts (think terrain modification, dynamic materials, etc.). You'll own key parts of the rendering stack, balancing high visual fidelity with top-tier PC performance.",
+		slug: 'graphics-engineer-unity',
+		pdfUrl: '/pdfs/graphics-engineer-unity.pdf',
+		linkedinUrl: 'https://www.linkedin.com/company/galactic-fleet/about/',
+		whatYouDo: [
+			'Design and implement rendering features in Unity on Windows - render on an ever-changing terrain!',
+			'Diagnose and fix rendering issues across different GPUs and drivers',
+			'Support art teams with asset integration and tooling'
+		],
+		whatWeLookFor: [
+			'Expertise in Unity rendering and shader development',
+			'Understand real-time rendering fundamentals',
+			'Are comfortable debugging complex visual or performance issues'
+		]
+	}
 ];
