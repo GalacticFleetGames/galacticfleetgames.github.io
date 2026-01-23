@@ -5,7 +5,7 @@
 </script>
 
 <section
-	class="bg-top-right min-h-screen w-full bg-[url('/svgs/layout/blog-bg.svg')] bg-contain bg-no-repeat text-black md:bg-[url('/svgs/layout/job-bg.svg')]"
+	class="bg-babyBlue bg-top-right min-h-screen w-full bg-[url('/svgs/layout/blog-bg.svg')] bg-contain bg-no-repeat text-[#0365aa] md:bg-[url('/svgs/layout/job-bg.svg')]"
 >
 	{#if data.job}
 		<div
@@ -30,6 +30,24 @@
 			>
 				{data.job.description} 
 			</p>
+			<div class="flex flex-wrap items-center gap-3 md:gap-4 xl:gap-6">
+				<a
+					href={data.job.pdfUrl}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-flex items-center rounded-full border-2 border-evenDarkerNavy px-5 py-1.5 font-aldrich text-sm text-evenDarkerNavy transition-all duration-200 hover:-translate-y-2 hover:opacity-80 md:border-4 md:px-6 md:py-2 md:text-xl xl:px-10 xl:py-6 xl:text-4xl"
+				>
+					Learn&nbsp;More
+				</a>
+				<a
+					href="https://www.linkedin.com/company/galactic-fleet/about/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-flex items-center rounded-full border-2 border-evenDarkerNavy px-5 py-1.5 font-aldrich text-sm text-evenDarkerNavy transition-all duration-200 hover:-translate-y-2 hover:opacity-80 md:border-4 md:px-6 md:py-2 md:text-xl xl:px-10 xl:py-6 xl:text-4xl"
+				>
+					Contact&nbsp;us&nbsp;on&nbsp;LinkedIn
+				</a>
+			</div>
 
 			<List title="Responsibilities" items={data.job.whatYouDo} />
 			<List title="What are we looking for" items={data.job.whatWeLookFor} />
