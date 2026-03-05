@@ -12,6 +12,6 @@ export const load: PageServerLoad = ({ params }) => {
 	};
 };
 
-export const prerender = true;
+export const prerender = jobs.length > 0;
 
 export const entries = () => jobs.map((job) => ({ job: job.slug }));
