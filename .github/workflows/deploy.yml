@@ -14,47 +14,26 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-          run_install: false
+          node-version: 20
+          cache: npm
 
       - name: Install Dependencies
-        run: pnpm install
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - name: Setup pnpm cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+        run: npm ci
 
       - name: Build
-        env:
-          BASE_PATH: '/'
         run: |
-          pnpm run build
-          touch build/.nojekyll
+          npm run build
+          touch out/.nojekyll
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build/
+          path: out/
 
   deploy:
     needs: build_site
