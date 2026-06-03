@@ -62,20 +62,68 @@ export const about = {
 // ---------------------------------------------------------------------------
 //  TEAM PAGE  ("/team")
 // ---------------------------------------------------------------------------
+//  Add a member by copying a { ... } block. Photos live in
+//  public/assets/team/<name>.png and are referenced as "/assets/team/<name>.png".
 export const team = {
   title: "Team",
-  paragraphs: [
-    "Under construction.",
+  intro: "The crew behind Galactic Fleet.",
+  members: [
+    {
+      name: "Balazs",
+      role: "Founder, CEO",
+      photo: "/assets/team/balazs.png",
+      bio: "Balazs has a knack for building and running high-performing product engineering teams. In his roles at various small startups and big names like Cloudera, Formlabs, Prezi and Nokia he saw that people who worked around him made things happen. Based in Budapest but with his heart in California, he brings a cool mix of innovation and know-how to the table.",
+    },
+    {
+      name: "Alex",
+      role: "Engineer",
+      photo: "/assets/team/alex.png",
+      bio: "Alex is a passionate software engineer, striving for efficiency in his work. His journey began in high school, where he learned programming, and it has led him to experiment with all kinds of coding. He finds joy in developing optimized solutions for backend services and internal tools.",
+    },
+    {
+      name: "Misi",
+      role: "Software Engineer",
+      photo: "/assets/team/misi.png",
+      bio: "Misi is a backend engineer, worked on a wide variety of consumer and business applications. He prefers to work with functional and strongly typed programming languages on tough problems. He is very much interested in new technologies and gadgets, loves casual, \"indy\" or racing games. In real life he enjoys riding motorbikes, travelling around, spending time outdoors and taking a lot of photos.",
+    },
+    {
+      name: "Bence",
+      role: "Software Engineer",
+      photo: "/assets/team/bence.png",
+      bio: "Bence is a software engineer with a passion for gaming. While his main focus lies in DevOps and tackling infrastructural challenges, don't be deceived. His interest in game development traces back to the day he unwrapped his first Nintendo Famicom console. As a lifelong learner, you're welcome to reach out to him with any tech-related inquiries.",
+    },
   ],
 };
 
 // ---------------------------------------------------------------------------
 //  SERVICES PAGE  ("/services")
 // ---------------------------------------------------------------------------
+//  `intro` is an optional line under the title (leave "" to hide it).
+//  Add a service by copying an { title, description } block.
 export const services = {
   title: "Services",
-  paragraphs: [
-    "Under construction.",
+  intro: "",
+  items: [
+    {
+      title: "Platform SDKs & Integrations",
+      description:
+        "Production-ready SDKs for rapid prototyping, all the way to production, to enable your existing games to focus on game logic.",
+    },
+    {
+      title: "Backend Simulation",
+      description:
+        "High-performance simulation systems for creating, optimizing, and adapting to gameplay requirements.",
+    },
+    {
+      title: "Infrastructure",
+      description:
+        "Cloud and DevOps to get your game ready for launch, AI-assisted engineering tools to speed up production pipelines, architecture, optimization for output and costs, running it, scaling, and infrastructure as code for services.",
+    },
+    {
+      title: "AI Game Experiences",
+      description:
+        "LLM-powered game mechanics, voice-driven gameplay, and adaptive content.",
+    },
   ],
 };
 
