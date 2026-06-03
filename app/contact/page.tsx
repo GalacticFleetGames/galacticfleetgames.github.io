@@ -1,58 +1,10 @@
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ChannelIcon from "@/components/ChannelIcon";
+import { contact, channelLogoStyle } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Contact · Galactic Fleet" };
-
-const CHANNELS: {
-  id: string;
-  name: string;
-  handle: string;
-  url: string;
-  logoStyle: CSSProperties;
-}[] = [
-  {
-    id: "github",
-    name: "GitHub",
-    handle: "github.com/galactic-fleet",
-    url: "https://github.com/galactic-fleet",
-    logoStyle: { background: "#181717" },
-  },
-  {
-    id: "linkedin",
-    name: "LinkedIn",
-    handle: "linkedin.com/company/galactic-fleet",
-    url: "https://linkedin.com/company/galactic-fleet",
-    logoStyle: { background: "#0A66C2" },
-  },
-  {
-    id: "x",
-    name: "X · Twitter",
-    handle: "@galactic-fleet",
-    url: "https://x.com/galactic-fleet",
-    logoStyle: { background: "#000000" },
-  },
-  {
-    id: "instagram",
-    name: "Instagram",
-    handle: "@galactic-fleet",
-    url: "https://instagram.com/galactic-fleet",
-    logoStyle: {
-      backgroundImage:
-        "linear-gradient(135deg, #feda75 0%, #fa7e1e 30%, #d62976 60%, #962fbf 80%, #4f5bd5 100%)",
-    },
-  },
-  {
-    id: "facebook",
-    name: "Facebook",
-    handle: "facebook.com/galactic-fleet",
-    url: "https://facebook.com/galactic-fleet",
-    logoStyle: { background: "#1877F2" },
-  },
-];
-
-const PLACEHOLDER_ROW_COUNT = 2;
 
 export default function ContactPage() {
   return (
@@ -60,37 +12,34 @@ export default function ContactPage() {
       <Header />
       <main className="contact-page" style={{ background: "#B07F77", color: "#ffffff" }}>
         <section className="contact-hero">
-          <h1 className="contact-h1">Get in touch</h1>
+          <h1 className="contact-h1">{contact.heading}</h1>
 
-          <p className="contact-lede">
-            Tell us about the mission. We&rsquo;ll write back within a working day — two,
-            if the comms are quiet on the other side of the moon.
-          </p>
+          <p className="contact-lede">{contact.lede}</p>
 
           <a
             className="contact-primary-email"
-            href="mailto:hello@galactic-fleet.com"
+            href={`mailto:${contact.email}`}
           >
-            hello@galactic-fleet.com
+            {contact.email}
           </a>
 
           <p className="contact-location" aria-label="Location and availability">
-            <span>Earth Orbit · Sol III</span>
+            <span>{contact.location.place}</span>
             <span className="dot" aria-hidden="true">
               ·
             </span>
-            <span>UTC&nbsp;+0</span>
+            <span>{contact.location.timezone}</span>
             <span className="dot" aria-hidden="true">
               ·
             </span>
-            <span>Online 24/7</span>
+            <span>{contact.location.availability}</span>
           </p>
         </section>
 
         <div className="contact-divider" aria-hidden="true"></div>
 
         <ul className="channel-list" aria-label="Galactic Fleet channels">
-          {CHANNELS.map((c) => (
+          {contact.channels.map((c) => (
             <li key={c.id} className="channel-row">
               <a
                 className="channel-link"
@@ -99,7 +48,9 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 aria-label={`${c.name} — ${c.handle}`}
               >
-                <span className="channel-logo" style={c.logoStyle} aria-hidden="true"></span>
+                <span className="channel-logo" style={channelLogoStyle(c)} aria-hidden="true">
+                  <ChannelIcon id={c.id} />
+                </span>
                 <span className="channel-text">
                   <span className="channel-name">{c.name}</span>
                   <span className="channel-handle">{c.handle}</span>
@@ -111,7 +62,7 @@ export default function ContactPage() {
             </li>
           ))}
 
-          {Array.from({ length: PLACEHOLDER_ROW_COUNT }).map((_, i) => (
+          {Array.from({ length: contact.placeholderRowCount }).map((_, i) => (
             <li key={`ph-${i}`} className="channel-row channel-row-placeholder">
               <div className="channel-link channel-link-placeholder" aria-hidden="true">
                 <span className="channel-logo channel-logo-placeholder"></span>

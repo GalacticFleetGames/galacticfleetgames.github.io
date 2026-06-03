@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { STORIES, type Story } from "@/lib/stories";
+import { STORIES, storyCover, type Story } from "@/lib/stories";
 
 export default function DevStoriesCarousel() {
   const [perPage, setPerPage] = useState(3);
@@ -146,8 +146,9 @@ export default function DevStoriesCarousel() {
                     <h3>{s.title}</h3>
                     <div className="story-thumb">
                       <img
-                        src={`/assets/placeholders/${s.id}.svg`}
+                        src={storyCover(s)}
                         alt={`${s.title} cover`}
+                        style={{ objectPosition: s.coverPosition }}
                       />
                     </div>
                     <p>{s.brief}</p>

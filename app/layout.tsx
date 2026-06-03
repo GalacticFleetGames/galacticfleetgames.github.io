@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Koulen, Inter, Press_Start_2P } from "next/font/google";
 import "./globals.css";
+import { site } from "@/lib/content";
 
 const koulen = Koulen({
   variable: "--font-koulen",
@@ -25,8 +26,8 @@ const pressStart = Press_Start_2P({
 });
 
 export const metadata: Metadata = {
-  title: "Galactic Fleet",
-  description: "Galactic Fleet — engineering across the system.",
+  title: site.title,
+  description: site.description,
 };
 
 export default function RootLayout({
