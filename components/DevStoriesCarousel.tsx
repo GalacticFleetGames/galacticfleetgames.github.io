@@ -2,9 +2,11 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { STORIES, storyCover, type Story } from "@/lib/stories";
+import type { Story } from "@/lib/stories";
 
-export default function DevStoriesCarousel() {
+// Stories are loaded from content/stories/*.md on the server (lib/stories.ts)
+// and passed in here, because this client component can't read the filesystem.
+export default function DevStoriesCarousel({ stories }: { stories: Story[] }) {
   const [perPage, setPerPage] = useState(3);
   const [pos, setPos] = useState(1);
   const [animate, setAnimate] = useState(true);
@@ -24,11 +26,11 @@ export default function DevStoriesCarousel() {
 
   const pages = useMemo<Story[][]>(() => {
     const out: Story[][] = [];
-    for (let i = 0; i < STORIES.length; i += perPage) {
-      out.push(STORIES.slice(i, i + perPage));
+    for (let i = 0; i < stories.length; i += perPage) {
+      out.push(stories.slice(i, i + perPage));
     }
     return out;
-  }, [perPage]);
+  }, [stories, perPage]);
 
   const totalPages = pages.length;
 
@@ -146,7 +148,7 @@ export default function DevStoriesCarousel() {
                     <h3>{s.title}</h3>
                     <div className="story-thumb">
                       <img
-                        src={storyCover(s)}
+                        src={s.cover}
                         alt={`${s.title} cover`}
                         style={{ objectPosition: s.coverPosition }}
                       />

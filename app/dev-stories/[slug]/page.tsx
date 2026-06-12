@@ -2,24 +2,11 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { readFile } from "fs/promises";
-import path from "path";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { STORIES, storyCover } from "@/lib/stories";
+import { getStories, getStory } from "@/lib/stories";
 
 type Params = { slug: string };
-
-// Read a post's article text from content/stories/<id>.md at build time.
-// Returns "" if the file doesn't exist yet (so the page still builds).
-async function loadStoryBody(id: string): Promise<string> {
-  try {
-    const file = path.join(process.cwd(), "content", "stories", `${id}.md`);
-    return await readFile(file, "utf8");
-  } catch {
-    return "";
-  }
-}
 
 // Turn **bold** and *italic* markers inside a line into real formatting.
 function renderInline(text: string, keyBase: string) {
@@ -38,7 +25,7 @@ function renderInline(text: string, keyBase: string) {
 // Matches a numbered-list line, e.g. "1. First item".
 const ORDERED_ITEM = /^\d+\.\s+/;
 
-// Render a story's `body` text (see lib/stories.ts for the markers):
+// Render a story's article text (see lib/stories.ts for the markers):
 //   "## "  -> subheading        "### "  -> smaller subheading
 //   "> "   -> pull-quote        "- "    -> bullet list item
 //   "1. "  -> numbered list      anything else -> a paragraph
@@ -108,7 +95,7 @@ function PostBody({ body }: { body: string }) {
 }
 
 export function generateStaticParams(): Params[] {
-  return STORIES.map((s) => ({ slug: s.id }));
+  return getStories().map((s) => ({ slug: s.id }));
 }
 
 export async function generateMetadata({
@@ -117,7 +104,7 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const story = STORIES.find((s) => s.id === slug);
+  const story = getStory(slug);
   return {
     title: story
       ? `${story.title} · Dev Stories · Galactic Fleet`
@@ -131,12 +118,12 @@ export default async function PostPage({
   params: Promise<Params>;
 }) {
   const { slug } = await params;
-  const idx = STORIES.findIndex((s) => s.id === slug);
-  if (idx < 0) notFound();
-  const story = STORIES[idx];
-  const body = await loadStoryBody(story.id);
-  const prev = idx > 0 ? STORIES[idx - 1] : null;
-  const next = idx < STORIES.length - 1 ? STORIES[idx + 1] : null;
+  const story = getStory(slug);
+  if (!story) notFound();
+  const stories = getStories();
+  const idx = stories.findIndex((s) => s.id === slug);
+  const prev = idx > 0 ? stories[idx - 1] : null;
+  const next = idx < stories.length - 1 ? stories[idx + 1] : null;
 
   return (
     <>
@@ -154,13 +141,13 @@ export default async function PostPage({
 
           <div className="post-hero">
             <img
-              src={storyCover(story)}
+              src={story.cover}
               alt={`${story.title} hero`}
               style={{ objectPosition: story.coverPosition }}
             />
           </div>
 
-          <PostBody body={body} />
+          <PostBody body={story.body} />
 
           <nav className="post-nav" aria-label="Post navigation">
             {prev ? (

@@ -6,6 +6,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import DevStoriesCarousel from "@/components/DevStoriesCarousel";
 import ChannelIcon from "@/components/ChannelIcon";
 import { home, contact, channelLogoStyle } from "@/lib/content";
+import { getStories } from "@/lib/stories";
 
 export default function Home() {
   return (
@@ -40,7 +41,7 @@ export default function Home() {
           </div>
         </section>
 
-        <DevStoriesCarousel />
+        <DevStoriesCarousel stories={getStories()} />
 
         <section className="section contact" id="contact">
           <h2 className="reveal">{home.contactHeading}</h2>
