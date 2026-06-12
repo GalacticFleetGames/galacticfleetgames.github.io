@@ -1,41 +1,31 @@
-<!--
-  ARCHIVED DRAFT — not shown on the website.
-  Files in content/drafts/ are ignored by the site (the dev-stories pages only
-  read content/stories/<id>.md).
-
-  TO RESTORE THIS POST LATER:
-    1. Move this file to: content/stories/casim.md
-       (and delete this <!-- ... --> comment block).
-    2. Add this entry back into the STORIES list in lib/stories.ts:
-         {
-           id: "casim",
-           title: "A Living World: Rewriting CASIM in Rust",
-           brief: "How rewriting CASIM in Rust enabled the game's core design to come to life. ",
-         },
-    3. Cover image already exists at public/assets/placeholders/casim.svg
--->
+---
+title: A Living World: Rewriting CASIM in Rust
+brief: How rewriting CASIM in Rust enabled the game's core design to come to life.
+order: 4
+draft: true
+---
 
 ## How we rebuilt the heart of a large scale MMO in Rust — and made the world itself the game:
 
-One of our biggest projects with our long-term partner is working on a large-scale MMO RPG which is currently in early access. Since the very start of the project, the core design indicated that the game world should be central to the experience, acting as a key element of gameplay rather than simply a backdrop. A living and evolving world relies on a single piece of technology - CASIM, Cell Automator Simulator. 
+One of our biggest projects with our long-term partner is working on a large-scale MMO RPG which is currently in early access. Since the very start of the project, the core design indicated that the game world should be central to the experience, acting as a key element of gameplay rather than simply a backdrop. A living and evolving world relies on a single piece of technology - CASIM, Cell Automator Simulator.
 ## What does CASIM DO?
 So what does CASIM actually do? CASIM thinks of the world as a 3D grid of cells, and simulates them accordingly. These simulations are recalculated 10 times a second, leading to high fidelity updates. The question then becomes, what gets updated? That is the power of having a strong CASIM system, the list grows as design needs it to. Water flows, pools, and even erodes. Heat rises, melts, and affects materials around it. Objects can fall and slide differently depending on the gravity and other things around them. Our CASIM system is built to support an ever growing game, leading to many unique opportunities for future feature integration and support. The world is such a central element to the game. That is why it is important to create a robust solution and approach rather than a series of patchwork stopgaps.
 ## The problem we inherited:
 When we joined the project, CASIM was written in C#. It worked well for a prototype, but the team had much bigger goals for the simulation.
 We needed the system to:
-run at 10 iterations per second consistently
-scale from 128³ worlds to 1024³ and beyond
-reduce memory and garbage collection issues
-stay maintainable as new systems were added
-work across Linux, Mac, and Windows
+- run at 10 iterations per second consistently
+- scale from 128³ worlds to 1024³ and beyond
+- reduce memory and garbage collection issues
+- stay maintainable as new systems were added
+- work across Linux, Mac, and Windows
 At a certain point, the prototype had reached its limits. Pushing performance further was becoming more expensive and harder to maintain.
 ## Why Rust?
 We chose Rust for four simple reasons.
 Rust gave us:
--Resource management (CPU, memory, threading) without significant or random overhead (garbage collection…)
--significantly better performance
--strong multi-threading support
--easier cross-platform development
+- Resource management (CPU, memory, threading) without significant or random overhead (garbage collection…)
+- significantly better performance
+- strong multi-threading support
+- easier cross-platform development
 None of us were Rust experts when we started. That’s worth saying out loud.
 We learned while building, refactored systems multiple times, and improved the architecture as our understanding of the language grew.
 That process ended up making the system stronger in the long run.
@@ -46,11 +36,11 @@ A fast simulation isn't worth much if nothing else can be read from it. The next
 The fix had two parts. First, we restructured how CASIM uses memory and CPU cores so that simulation work and data-serving work don't block each other. Second, instead of pushing the entire world state to consumers, we send deltas — only what changed since last iteration. The network layer became as much of a design problem as the simulation itself, and ended up being one of the most efficient pieces of the system.
 ## Where we landed
 The rewrite gave us:
--1024m³ simulated worlds running at 10 iterations per second
--a cleaner and more extendable simulation framework
--multi-threaded optimization across cores
--full cross-platform support
--a lightweight networking layer for world updates
+- 1024m³ simulated worlds running at 10 iterations per second
+- a cleaner and more extendable simulation framework
+- multi-threaded optimization across cores
+- full cross-platform support
+- a lightweight networking layer for world updates
 It also made adding new systems significantly easier. Gas simulation, for example, was added later as a test of how flexible the architecture had become.
 ## The bonus we didn't fully see coming
 Originally, the plan was for CASIM to communicate with Unity through external services. But because Rust supports so many targets, we were able to compile client binaries that run directly inside Unity itself. That moved a major part of the project away from Unity’s runtime limitations and onto a faster, more memory-efficient foundation. Sometimes a good technical decision solves more problems than you originally planned for.

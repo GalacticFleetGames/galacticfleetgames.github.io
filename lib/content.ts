@@ -13,7 +13,8 @@
 //    • For an apostrophe inside text, write it normally: "We're".
 //    • Blank a line out by leaving empty quotes: "".
 //
-//  Blog / Dev Story posts live in their own file: lib/stories.ts
+//  Blog / Dev Story posts live in Markdown files: content/stories/<id>.md
+//  (see lib/stories.ts for instructions).
 // ============================================================================
 
 import type { CSSProperties } from "react";
@@ -191,7 +192,8 @@ export const play = {
 
 // ---------------------------------------------------------------------------
 //  DEV STORIES INDEX  ("/dev-stories")  — the list page heading.
-//  The actual posts (titles, dates, bodies) live in lib/stories.ts
+//  The actual posts live in Markdown files: content/stories/<id>.md
+//  (see lib/stories.ts for instructions).
 // ---------------------------------------------------------------------------
 export const devStories = {
   eyebrow: "Field notes from orbit",

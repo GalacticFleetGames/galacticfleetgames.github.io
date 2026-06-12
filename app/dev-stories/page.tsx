@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { STORIES, storyCover } from "@/lib/stories";
+import { getStories } from "@/lib/stories";
 import { devStories } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Dev Stories · Galactic Fleet" };
@@ -19,7 +19,7 @@ export default function DevStoriesIndex() {
           </header>
 
           <ol className="story-list" aria-label="All dev stories">
-            {STORIES.map((s) => (
+            {getStories().map((s) => (
               <li key={s.id} className="story-row">
                 <Link
                   className="story-row-thumb"
@@ -27,7 +27,7 @@ export default function DevStoriesIndex() {
                   aria-label={`Open ${s.title}`}
                 >
                   <img
-                    src={storyCover(s)}
+                    src={s.cover}
                     alt={`${s.title} cover`}
                     style={{ objectPosition: s.coverPosition }}
                   />

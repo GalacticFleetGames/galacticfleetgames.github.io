@@ -1,3 +1,11 @@
+---
+title: Looking Up: Our First Game
+brief: We didn’t just build our first game — we learned how to make games by making it.
+cover: /assets/placeholders/lookingup.png
+coverPosition: left
+order: 2
+---
+
 ##  From Idea to Game: How Looking Up Came to Life
 Before Looking Up became the cozy puzzle game it is today, it existed in many completely different forms. At one point, it was a game about playful monsters. Another version leaned into a witchy atmosphere. Some concepts even focused on crafting mechanics instead of puzzles. Like many first projects, we started with ideas that were exciting, ambitious, and far beyond what our team could realistically build at the time. That became our first major challenge: figuring out not only what kind of game we wanted to make, but what kind of game we were actually capable of making.
 
