@@ -42,6 +42,17 @@ export default function Home() {
 
         <DevStoriesCarousel />
 
+        <section className="section testimonial" id="testimonial">
+          <blockquote className="testimonial-quote reveal">
+            <p>&ldquo;Galactic Fleet has been an embedded part of our engineering team for over three years. When we needed to rewrite our world simulation system in Rust, they worked as a true extension of our team, taking ownership of the hard problems and driving the work forward alongside our engineers. They brought the cloud and AWS expertise we badly needed as a game studio, along with industry-standard CI/CD and AI practices that raised the bar for how we build and ship. They were also the team we trusted when we needed to scale our infrastructure for launch. They made sure the system could handle the pressure on day one. They don&rsquo;t wait to be told what needs fixing; they do it. That&rsquo;s rare in a co-development partner.&rdquo;</p>
+            <footer className="testimonial-attribution reveal delay-1">
+              <strong>David Pitkin</strong>
+              <span>VP of Engineering</span>
+              <span>Playable Worlds</span>
+            </footer>
+          </blockquote>
+        </section>
+
         <section className="section contact" id="contact">
           <h2 className="reveal">{home.contactHeading}</h2>
           <div className="contact-pill reveal delay-1">

@@ -694,6 +694,44 @@ main { position: relative; z-index: 5; }
 }
 
 /* ===== CONTACT (landing section) ===== */
+.testimonial {
+  position: relative;
+  z-index: 2;
+  padding: 80px var(--side-pad);
+  display: flex;
+  justify-content: center;
+}
+.testimonial-quote {
+  max-width: 860px;
+  margin: 0;
+  padding: 48px 56px;
+  border-left: 4px solid var(--c-navy);
+  background: rgba(255,255,255,0.25);
+  border-radius: 0 12px 12px 0;
+}
+.testimonial-quote p {
+  font-family: var(--f-body);
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.75;
+  color: var(--c-navy);
+  margin: 0 0 28px;
+  font-style: italic;
+}
+.testimonial-attribution {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--f-body);
+  font-size: 14px;
+  color: var(--c-navy);
+  opacity: 0.75;
+}
+.testimonial-attribution strong {
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 1;
+}
+
 .contact {
   position: relative;
   z-index: 2;
